@@ -67,7 +67,9 @@
     border: 2px solid var(--accent-color);
     width: 42px;
     height: 42px;
-    display:inline-block;
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     border-radius: 50%;
     margin: 0 10px;
