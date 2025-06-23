@@ -257,11 +257,7 @@ turnMethods = {
 				if (has(i, opts.when))
 					this.bind(i, opts.when[i]);
 
-		const parent = document.getElementById("flipBookSection");
-		const styles = window.getComputedStyle(parent);
-
-		// this.css({position: 'relative', width: opts.width, height: opts.height});
-		this.css({position: 'relative', width: styles.width / 2, height: opts.height});
+		this.css({position: 'relative', width: opts.width, height: opts.height});
 
 		this.turn('display', opts.display);
 

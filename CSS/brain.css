@@ -1,4 +1,4 @@
-#flipbook {
+#flipbook > div > img {
     width: 70%;
-    height: 400px;
+    height: 45%;
 }
