@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <title>Mori Calliope - End of a Life</title>
+    <link rel="stylesheet"
+          href="https://cdn.plyr.io/3.7.8/plyr.css"/>
+    <link rel="stylesheet" href="CSS/plyr.css"/>
+    <style>
+        body {
+            background: #111;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .plyr__video-embed {
+            width: 80vw;
+            /*max-width: 960px;*/
+            aspect-ratio: 16 / 9;
+        }
+    </style>
+</head>
+<body>
+    <div class="plyr__video-embed"
+         id="player">
+        <iframe
+                src="https://www.youtube.com/watch?v=BXB26PzV31k&list=RDBXB26PzV31k&start_radio=1"
+                allowfullscreen
+                allowtransparency
+                allow="autoplay"
+        ></iframe>
+    </div>
+
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    <script>
+        const player = new Plyr('#player', {
+            controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions',],
+            youtube: {
+                noCookie: true,
+            }
+        });
+
+        player.on('ended', () => {
+            player.stop();
+        })
+    </script>
+
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>

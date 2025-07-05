@@ -1,4 +1,25 @@
-#flipbook > div > img {
-    width: 70%;
-    height: 45%;
+
+#slider {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
 }
+
+#slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 1s ease;
+}
+
+#next {
+    transform: translateX(100%);
+    z-index: 2;
+}
+
+#slideShow {
+    z-index: 1;
+}
+

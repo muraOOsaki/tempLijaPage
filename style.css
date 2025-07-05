@@ -63,11 +63,6 @@ video {
     margin-top: 5rem;
 }
 
-
-.contentWrapper div {
-    width: 70%;
-}
-
 .contentWrapper div {
     width: 70%;
 }
@@ -301,13 +296,16 @@ p {
     }
 }
 
-@media (max-width: 895px) {
-    #menu-icon {
-        display: block;
-    }
-}
-
 @media (max-width: 767px) {
+
+    .contentWrapper div {
+        width: 95%;
+    }
+
+    section {
+        padding: 0 1rem;
+    }
+
     video {
         display: block;
         margin: 0 auto;

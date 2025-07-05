@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide In Image</title>
+    <style>
+        #slider {
+            position: relative;
+            width: 400px;
+            height: 250px;
+            overflow: hidden;
+            border: 2px solid #ccc;
+        }
+
+        #slider img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            transition: transform 1s ease;
+        }
+
+        #next {
+            transform: translateX(100%);
+            z-index: 2;
+        }
+
+        #current {
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="slider">
+        <img id="current" src="Wallpaper/Image_1.jpg" />
+        <img id="next" />
+    </div>
+
+    <script>
+        const images = [
+            "Wallpaper/Image_1.jpg",
+            "Wallpaper/Image_2.jpg",
+            "Wallpaper/Image_3.jpg"
+        ];
+
+        let index = 0;
+        const current = document.getElementById("current");
+        const next = document.getElementById("next");
+
+        setInterval(() => {
+            // Set next image
+            next.src = images[(index + 1) % images.length];
+            next.style.transition = "none";
+            next.style.transform = "translateX(100%)";
+
+            // Force reflow
+            void next.offsetWidth;
+
+            // Animate in
+            next.style.transition = "transform 1s ease";
+            next.style.transform = "translateX(0)";
+
+            // After animation, swap
+            setTimeout(() => {
+                current.src = next.src;
+                next.style.transition = "none";
+                next.style.transform = "translateX(100%)";
+                index = (index + 1) % images.length;
+            }, 1000);
+        }, 3000);
+    </script>
+
+</body>
+</html>

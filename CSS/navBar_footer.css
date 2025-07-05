@@ -171,6 +171,11 @@
         margin: 3rem 0;
         color: black;
     }
+
+    #menu-icon {
+        display: block;
+    }
+
 }
 
 @media (max-width: 767px){
