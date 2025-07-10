@@ -57,6 +57,17 @@
     max-width: 1000px;
 }
 
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#player_homePage {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+}
+
 .text-animation {
     font-size: 34px;
     font-weight: 600;
